@@ -1,5 +1,7 @@
 # Minesweeper RL Agent
 
+[![CI](https://github.com/fyfhcgch/mine-clear-llm/actions/workflows/ci.yml/badge.svg)](https://github.com/fyfhcgch/mine-clear-llm/actions/workflows/ci.yml)
+
 基于 Gymnasium + PyTorch 的扫雷强化学习项目，包含 DQN、PPO、简化 GRPO、行为克隆和一个 C++ 纯文本扫雷小游戏。
 
 当前模型使用**全卷积空间策略头**：网络在输出动作前保留 `rows x cols` 的格子位置特征，再为每个格子生成动作 logits/Q 值。相比把整块棋盘压成全局向量，这种结构更适合扫雷这种“每个格子都是一个动作”的任务。
